@@ -68,15 +68,13 @@
 		    element4.type = "button";
 		    element4.id = rowID;
 		    element4.value = "";
-		    element4.setAttribute("onclick", "deleteSelectedRow(this.id-1)");
+		    element4.setAttribute("onclick", "deleteSelectedRow(this.id)");
 		    element4.className = "deleteButton";
 		    cell4.appendChild(element4);
 		 
 		    // update the UI and save the to-do list
 		    checkboxClicked();
 		    saveToDoList();
-		 
-		    if (!appIsLoading) alert("Task Added Successfully.");
 		}
 		
 		// add the strike-through styling to completed tasks
@@ -122,12 +120,10 @@
 		// delete the content of the selected row
 		function deleteSelectedRow(thisRow)
 		{
-		    var table = document.getElementById("dataTable");
-		    table.deleteRow(thisRow);
+			var table = document.getElementById("dataTable");
+		    table.deleteRow(thisRow-1);
 		    
 		    saveToDoList();
-		 
-		    alert("Completed Tasks Were Removed Successfully.");
 		}
 		
 		// remove completed tasks
@@ -152,8 +148,6 @@
 		 
 		    // save the to-do list
 		    saveToDoList();
-		 
-		    alert("Completed Tasks Were Removed Successfully.");
 		}
 		
 		// save the to-do list
