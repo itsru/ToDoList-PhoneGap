@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-    <widget xmlns   = "http://www.w3.org/ns/widgets"
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
         id          = "com.phonegap.ToDoList"
         version     = "1.0.0" >
-
-    <!-- versionCode is optional and Android only -->
 
     <name>PhoneGap ToDo List</name>
 
@@ -17,7 +17,6 @@
     permission on your app, which PhoneGap requires. -->
 	<preference name="permissions"                value="none"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-	<gap:platform name="android" />
     <!-- Customize your app and platform with the preference element. -->
     <preference name="orientation"                value="portrait" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
@@ -35,6 +34,7 @@
     <!-- Core plugins -->
     <gap:plugin name="org.apache.cordova.device" />
    	<gap:plugin name="org.apache.cordova.splashscreen" /> 
+   	<gap:platform name="android" />
 
  <access origin="*"/> <!-- allow local pages -->
     <!--
