@@ -22,8 +22,6 @@
     	<param name="android-package" value="org.apache.cordova.Storage" />
 	</feature>
     <!-- Core plugins -->
-    <gap:plugin name="org.apache.cordova.device" />
-   	<gap:plugin name="org.apache.cordova.splashscreen" /> 
    	<gap:platform name="android" />
 
  <access origin="*"/> <!-- allow local pages -->
